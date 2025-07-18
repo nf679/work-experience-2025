@@ -1,6 +1,12 @@
 # Work experience 2025
 
-Create a venv
+## Repository Structure and information
+
+
+
+## Using the program
+
+### Create a venv
 ```
 # On mac:
 python -m venv env
@@ -9,7 +15,7 @@ source env/bin/activate
 
 ```
 
-Install requirements using:
+### Install requirements using:
 ```
 # On mac:
 pip install -r requirements.txt
@@ -17,7 +23,7 @@ pip install -r requirements.txt
 
 ```
 
-Run the back-end using:
+### Run the back-end using:
 ```
 # On mac:
 uvicorn main:app --reload
@@ -25,7 +31,7 @@ uvicorn main:app --reload
 
 ```
 
-Run the front-end using:
+### Run the front-end using:
 ```
 # On mac:
 yarn start
@@ -33,7 +39,7 @@ yarn start
 
 ```
 
-Run back-end tests usng:
+### Run back-end tests usng:
 ```
 # On mac:
 pytest
