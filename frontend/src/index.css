@@ -1,13 +1,22 @@
+/* Style for the entire page body */
 body {
-  margin: 0;
+  margin: 0; /* Removes default spacing around the page */
+
+  /* Sets a clean, modern font family. Tries system fonts first, then falls back to common web fonts */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
+  /* Smoothens font edges on webkit-based browsers (like Chrome and Safari) */
   -webkit-font-smoothing: antialiased;
+
+  /* Smoothens font edges on Firefox (macOS) */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Style specifically for code blocks or inline code */
 code {
+  /* Use a monospace font for better readability of code */
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
