@@ -1,3 +1,4 @@
+# These are the packages we need to import for the back-end
 fastapi
 uvicorn[standard]
 pydantic
