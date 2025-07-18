@@ -25,7 +25,7 @@ frontend/                           # Folder containing the code for the front-e
 |  |  |-- ExampleTablePage.js       # An example of how to add a page with a table on it
 |  |  |-- HomePage.js               # The code for the home page of the app 
 |  |-- App.css                      # CSS file to style the whole app
-|  |-- App.js                       # The React code for the whole app - add pages to router here
+|  |-- App.js                       # React code for the whole app - add pages to router here
 |  |-- App.test.js                  # React Jest test file for the app
 |  |-- index.css                    # CSS file to style the index
 |  |-- index.js                     # index.js is the entry point for the whole application
@@ -33,7 +33,7 @@ frontend/                           # Folder containing the code for the front-e
 |  |-- setupTests.js                # File to set up the Jest testing framework for the repo
 |-- .gitignore                      # A file which tells git which files/folders to ignore
 |-- package.json                    # Contains a list of the packages the front-end depends on
-|-- yarn.lock                       # Detailed information about dependencies and their versions
+|-- yarn.lock                       # Detailed info about dependencies and their versions
 .gitignore                          # Tells git which files/folders to ignore
 README.md                           # A document providing information about the code
 ```
