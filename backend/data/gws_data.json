@@ -1,0 +1,504 @@
+{
+  "0": {
+    "path": "/gws/test/gws0",
+    "last_scan_date": "2025-02-10",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 8147,
+        "size": 6263702,
+        "mean_heat": 818.44
+      }
+    },
+    "total_size": 6263702,
+    "total_count": 8147
+  },
+  "1": {
+    "path": "/gws/test/gws1",
+    "last_scan_date": "2025-06-12",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 2925,
+        "size": 9038600,
+        "mean_heat": 312.56
+      },
+      "1": {
+        "path": "child1",
+        "count": 9954,
+        "size": 3721202,
+        "mean_heat": 976.82
+      },
+      "2": {
+        "path": "child2",
+        "count": 7255,
+        "size": 6882108,
+        "mean_heat": 551.32
+      },
+      "3": {
+        "path": "child3",
+        "count": 6893,
+        "size": 9806590,
+        "mean_heat": 286.91
+      }
+    },
+    "total_size": 29448500,
+    "total_count": 27027
+  },
+  "2": {
+    "path": "/gws/test/gws2",
+    "last_scan_date": "2025-01-16",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 1919,
+        "size": 9658096,
+        "mean_heat": 186.02
+      }
+    },
+    "total_size": 9658096,
+    "total_count": 1919
+  },
+  "3": {
+    "path": "/gws/test/gws3",
+    "last_scan_date": "2025-03-25",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 1384,
+        "size": 5912573,
+        "mean_heat": 3.62
+      }
+    },
+    "total_size": 5912573,
+    "total_count": 1384
+  },
+  "4": {
+    "path": "/gws/test/gws4",
+    "last_scan_date": "2025-04-06",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 5547,
+        "size": 3347112,
+        "mean_heat": 845.43
+      },
+      "1": {
+        "path": "child1",
+        "count": 2174,
+        "size": 852488,
+        "mean_heat": 839.62
+      },
+      "2": {
+        "path": "child2",
+        "count": 7692,
+        "size": 7660328,
+        "mean_heat": 224.65
+      },
+      "3": {
+        "path": "child3",
+        "count": 6716,
+        "size": 9946065,
+        "mean_heat": 555.42
+      }
+    },
+    "total_size": 21805993,
+    "total_count": 22129
+  },
+  "5": {
+    "path": "/gws/test/gws5",
+    "last_scan_date": "2025-06-04",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 6715,
+        "size": 1605012,
+        "mean_heat": 594.25
+      },
+      "1": {
+        "path": "child1",
+        "count": 7050,
+        "size": 5876603,
+        "mean_heat": 607.08
+      },
+      "2": {
+        "path": "child2",
+        "count": 5682,
+        "size": 4617211,
+        "mean_heat": 830.56
+      }
+    },
+    "total_size": 12098826,
+    "total_count": 19447
+  },
+  "6": {
+    "path": "/gws/test/gws6",
+    "last_scan_date": "2025-01-05",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 9415,
+        "size": 4396524,
+        "mean_heat": 688.99
+      },
+      "1": {
+        "path": "child1",
+        "count": 8210,
+        "size": 3534230,
+        "mean_heat": 534.29
+      }
+    },
+    "total_size": 7930754,
+    "total_count": 17625
+  },
+  "7": {
+    "path": "/gws/test/gws7",
+    "last_scan_date": "2024-08-01",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 4225,
+        "size": 1845681,
+        "mean_heat": 256.03
+      }
+    },
+    "total_size": 1845681,
+    "total_count": 4225
+  },
+  "8": {
+    "path": "/gws/test/gws8",
+    "last_scan_date": "2025-07-15",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 7924,
+        "size": 3534428,
+        "mean_heat": 272.8
+      },
+      "1": {
+        "path": "child1",
+        "count": 5975,
+        "size": 9372291,
+        "mean_heat": 254.99
+      },
+      "2": {
+        "path": "child2",
+        "count": 539,
+        "size": 8622798,
+        "mean_heat": 632.27
+      },
+      "3": {
+        "path": "child3",
+        "count": 1068,
+        "size": 173347,
+        "mean_heat": 596.3
+      },
+      "4": {
+        "path": "child4",
+        "count": 867,
+        "size": 3148531,
+        "mean_heat": 385.02
+      }
+    },
+    "total_size": 24851395,
+    "total_count": 16373
+  },
+  "9": {
+    "path": "/gws/test/gws9",
+    "last_scan_date": "2024-10-01",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 6486,
+        "size": 9174305,
+        "mean_heat": 704.9
+      }
+    },
+    "total_size": 9174305,
+    "total_count": 6486
+  },
+  "10": {
+    "path": "/gws/test/gws10",
+    "last_scan_date": "2024-08-04",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 6944,
+        "size": 4818560,
+        "mean_heat": 808.61
+      },
+      "1": {
+        "path": "child1",
+        "count": 7142,
+        "size": 2943572,
+        "mean_heat": 649.71
+      },
+      "2": {
+        "path": "child2",
+        "count": 5262,
+        "size": 4454647,
+        "mean_heat": 590.72
+      },
+      "3": {
+        "path": "child3",
+        "count": 7187,
+        "size": 1702911,
+        "mean_heat": 422.07
+      }
+    },
+    "total_size": 13919690,
+    "total_count": 26535
+  },
+  "11": {
+    "path": "/gws/test/gws11",
+    "last_scan_date": "2024-11-10",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 9129,
+        "size": 5474866,
+        "mean_heat": 947.21
+      }
+    },
+    "total_size": 5474866,
+    "total_count": 9129
+  },
+  "12": {
+    "path": "/gws/test/gws12",
+    "last_scan_date": "2024-12-09",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 7593,
+        "size": 8064997,
+        "mean_heat": 802.3
+      },
+      "1": {
+        "path": "child1",
+        "count": 6940,
+        "size": 7121292,
+        "mean_heat": 549.42
+      },
+      "2": {
+        "path": "child2",
+        "count": 407,
+        "size": 865591,
+        "mean_heat": 756.44
+      },
+      "3": {
+        "path": "child3",
+        "count": 395,
+        "size": 1855644,
+        "mean_heat": 201.97
+      }
+    },
+    "total_size": 17907524,
+    "total_count": 15335
+  },
+  "13": {
+    "path": "/gws/test/gws13",
+    "last_scan_date": "2024-07-25",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 5685,
+        "size": 4630535,
+        "mean_heat": 944.68
+      },
+      "1": {
+        "path": "child1",
+        "count": 9776,
+        "size": 8721991,
+        "mean_heat": 867.59
+      },
+      "2": {
+        "path": "child2",
+        "count": 5317,
+        "size": 2795836,
+        "mean_heat": 229.42
+      },
+      "3": {
+        "path": "child3",
+        "count": 185,
+        "size": 5107088,
+        "mean_heat": 932.38
+      }
+    },
+    "total_size": 21255450,
+    "total_count": 20963
+  },
+  "14": {
+    "path": "/gws/test/gws14",
+    "last_scan_date": "2025-02-22",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 1306,
+        "size": 9247351,
+        "mean_heat": 761.29
+      },
+      "1": {
+        "path": "child1",
+        "count": 2051,
+        "size": 3247140,
+        "mean_heat": 833.26
+      },
+      "2": {
+        "path": "child2",
+        "count": 9050,
+        "size": 9779286,
+        "mean_heat": 851.42
+      },
+      "3": {
+        "path": "child3",
+        "count": 9892,
+        "size": 2311470,
+        "mean_heat": 174.62
+      }
+    },
+    "total_size": 24585247,
+    "total_count": 22299
+  },
+  "15": {
+    "path": "/gws/test/gws15",
+    "last_scan_date": "2025-05-05",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 4426,
+        "size": 6669899,
+        "mean_heat": 305.78
+      },
+      "1": {
+        "path": "child1",
+        "count": 878,
+        "size": 2368741,
+        "mean_heat": 627.4
+      }
+    },
+    "total_size": 9038640,
+    "total_count": 5304
+  },
+  "16": {
+    "path": "/gws/test/gws16",
+    "last_scan_date": "2024-10-01",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 4562,
+        "size": 9286276,
+        "mean_heat": 272.57
+      },
+      "1": {
+        "path": "child1",
+        "count": 3237,
+        "size": 2168438,
+        "mean_heat": 690.91
+      },
+      "2": {
+        "path": "child2",
+        "count": 8539,
+        "size": 6084226,
+        "mean_heat": 416.78
+      },
+      "3": {
+        "path": "child3",
+        "count": 1220,
+        "size": 7868722,
+        "mean_heat": 248.14
+      },
+      "4": {
+        "path": "child4",
+        "count": 9345,
+        "size": 3398208,
+        "mean_heat": 724.18
+      }
+    },
+    "total_size": 28805870,
+    "total_count": 26903
+  },
+  "17": {
+    "path": "/gws/test/gws17",
+    "last_scan_date": "2025-01-06",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 5713,
+        "size": 5699601,
+        "mean_heat": 906.59
+      },
+      "1": {
+        "path": "child1",
+        "count": 3673,
+        "size": 1088699,
+        "mean_heat": 483.87
+      },
+      "2": {
+        "path": "child2",
+        "count": 386,
+        "size": 2228573,
+        "mean_heat": 488.48
+      },
+      "3": {
+        "path": "child3",
+        "count": 1359,
+        "size": 4960719,
+        "mean_heat": 818.53
+      },
+      "4": {
+        "path": "child4",
+        "count": 8968,
+        "size": 2544452,
+        "mean_heat": 274.05
+      }
+    },
+    "total_size": 16522044,
+    "total_count": 20099
+  },
+  "18": {
+    "path": "/gws/test/gws18",
+    "last_scan_date": "2024-07-23",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 7406,
+        "size": 3647632,
+        "mean_heat": 497.54
+      },
+      "1": {
+        "path": "child1",
+        "count": 2758,
+        "size": 7993444,
+        "mean_heat": 716.0
+      },
+      "2": {
+        "path": "child2",
+        "count": 1230,
+        "size": 8802287,
+        "mean_heat": 411.45
+      },
+      "3": {
+        "path": "child3",
+        "count": 3013,
+        "size": 5058315,
+        "mean_heat": 221.31
+      }
+    },
+    "total_size": 25501678,
+    "total_count": 14407
+  },
+  "19": {
+    "path": "/gws/test/gws19",
+    "last_scan_date": "2025-02-09",
+    "children": {
+      "0": {
+        "path": "child0",
+        "count": 2478,
+        "size": 7598836,
+        "mean_heat": 255.27
+      }
+    },
+    "total_size": 7598836,
+    "total_count": 2478
+  }
+}
