@@ -17,7 +17,7 @@ frontend/                           # Folder containing the code for the front-e
 |-- public/                         # Folder containing react logos - can ignore these
 |-- src/                            # Folder containing all source code for the front-end
 |  |-- components/                  # Folder containing components to go on pages
-|  |  |-- fwtheme-react-jasmin/     # Folder containing code for the JASMIN branding
+|  |  |-- fwtheme-react-jasmin/     # Folder containing code for the JASMIN branding (don't edit)
 |  |  |-- AppNavbar.css             # CSS file to style the App Navbar
 |  |  |-- AppNavbar.js              # The React code for the app's navbar with JASMIN logo
 |  |-- pages/                       # Folder containing the code for the different pages
