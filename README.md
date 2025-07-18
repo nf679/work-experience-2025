@@ -3,10 +3,10 @@
 ## Repository Structure and information
 
 ```
-backend/
-|-- data/
-|  |-- gws_data.json
-|  |-- gws_quota.json
+backend/                    # Folder containing the code for the back-end
+|-- data/                   # Folder containing the data files
+|  |-- gws_data.json        # A JSON data file containing all the GWS information
+|  |-- gws_quota.json       # A JSON data file containing the GWS quota information
 |--tests/
 |  |-- __init__.py
 |  |-- test_main.py
