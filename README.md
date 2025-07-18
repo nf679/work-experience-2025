@@ -2,6 +2,7 @@
 
 ## Repository Structure and information
 
+```
 backend/
 |-- data/
 |  |-- gws_data.json
@@ -28,10 +29,9 @@ frontend/
 |-- README.md
 |-- package.json
 |-- yarn.lock
-
 .gitignore
 README.md
-
+```
 
 ## Using the program
 
