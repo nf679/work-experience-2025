@@ -82,9 +82,10 @@ cd frontend
 yarn install
 yarn start
 ```
+Now if you go to `127.0.0.1:3000` or `localhost:3000` in your browser, you will see the homepage with the JASMIN theming and you know the frontend is running!
 
 ### Run back-end tests usng:
-On mac AND windows:
+On mac AND windows (make sure to have activated your virtual environment):
 ```
 cd backend
 pytest
