@@ -1,5 +1,9 @@
 # Work experience 2025
 
+## Contributors
+
+This app has been developed by Nicola, ...
+
 ## Repository Structure and information
 
 ```
