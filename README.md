@@ -41,45 +41,47 @@ README.md                           # A document providing information about the
 ## Using the program
 
 ### Create a venv
+A virtual environment is a self-contained folder on your computer where you can install Python libraries just for one project, without affecting other projects on your computer. Think of it as a sandbox for your project.
+
+On mac:
 ```
-# On mac:
 cd backend
 python -m venv env
 source env/bin/activate
-# On windows:
-
+```
+On Windows:
+```
+cd backend
+python -m venv env
+Set-ExecutionPolicy Unrestricted -Scope Process
+.\env\Scripts\Activate.ps1
 ```
 
 ### Install requirements using:
+On mac AND windows:
 ```
-# On mac:
 pip install -r requirements.txt
-# On windows:
-
 ```
 
 ### Run the back-end using:
+On mac AND windows:
 ```
-# On mac:
 uvicorn main:app --reload
-# On windows:
 
 ```
+Now if you go to `127.0.0.1:8000` or `localhost:8000` in your browser, you will see the JSON response `{"message":"Hello from FastAPI!"}` and you know the backend is running!
 
 ### Run the front-end using:
+On mac AND windows:
 ```
-# On mac:
 cd frontend
+yarn install
 yarn start
-# On windows:
-
 ```
 
 ### Run back-end tests usng:
+On mac AND windows:
 ```
-# On mac:
 cd backend
 pytest
-# On windows:
-
 ```
