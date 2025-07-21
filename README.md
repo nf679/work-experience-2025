@@ -2,7 +2,7 @@
 
 ## Contributors
 
-This app has been developed by Nicola, Melissa...
+This app has been developed by Nicola, M...
 
 ## Repository Structure and information
 
