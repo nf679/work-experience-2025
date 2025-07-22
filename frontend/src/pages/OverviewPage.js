@@ -44,17 +44,17 @@ export default function GwsTable() {
         ? new Date(a.date) - new Date(b.date)
         // Otherwise do this:
         : new Date(b.date) - new Date(a.date);
-    } else if (sortBy === 'numChildren'){
-      return sortOrder === ascending
-        //ascending
+    } else if (sortBy === 'numChildren') {
+      return sortOrder === 'ascending'
+        //ascent
         ? a.numChildren - b.numChildren
-        //descening
+        //descent
         : b.numChildren - a.numChildren
-    } else if (sortBy === 'totalSize'){
-      return sortOrder === ascending
-        //ascending
+    } else if (sortBy === 'totalSize') {
+      return sortOrder === 'ascending'
+        //ascent
         ? a.totalSize - b.totalSize
-        //descending
+        //descent
         : b.totalSize - a.totalSize
     }
     return 0; // Fallback option - shouldn't be reached!
