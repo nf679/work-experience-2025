@@ -46,16 +46,16 @@ export default function GwsTable() {
         : new Date(b.date) - new Date(a.date);
     } else if (sortBy === 'numChildren'){
       return sortOrder === ascending
-      //ascending
-      ? a.numChildren - b.numChildren
-      //descening
-      : b.numChildren - a.numChildren
+        //ascending
+        ? a.numChildren - b.numChildren
+        //descening
+        : b.numChildren - a.numChildren
     } else if (sortBy === 'totalSize'){
       return sortOrder === ascending
-      //ascending
-      ? a.totalSize - b.totalSize
-      //descending
-      : b.totalSize - a.totalSize
+        //ascending
+        ? a.totalSize - b.totalSize
+        //descending
+        : b.totalSize - a.totalSize
     }
     return 0; // Fallback option - shouldn't be reached!
   });
