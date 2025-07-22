@@ -34,6 +34,7 @@ def load_data():
       return json.load(f)
 
 def total_heat():
+    #Returns a modified version of the json file with the total heat for each bit of data
     data_path = Path("./data/gws_data.json")
 
     with open(data_path, "r") as f:
@@ -41,15 +42,15 @@ def total_heat():
       data = json.load(f)
     
     for x in data.values():
+        # Cycles through each entry in the data
         totalheat=0
-        print("asdf", x)
         for y in x["children"].values():
-          print(y)
+          # Cycles through each entry in the data and takes the values in the children
           totalheat += y["mean_heat"]
         x.update({"total_heat": totalheat})
     return data
-    # with open(data_path, "w") as f:
-    #   f.write(data)
+    # Returns the original data with an addition of a total heat value for each entry
+
 
 # This URL returns the full data loaded from the load_data function
 @app.get("/api/full-GWS-data")
@@ -57,6 +58,7 @@ def full_GWS_data():
   data = load_data()
   return data
 
+#This URL returns the data loaded from the total_heat() function
 @app.get("/api/heat-data")
 def heat_data():
   data = total_heat()
