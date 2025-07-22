@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 // Axios is a library used to make HTTP requests (get data from back-end)
 import axios from 'axios';
 // Import the line chart component from the react-chartjs-2 library
-import { Line } from 'react-chartjs-2';
+import { Line, Scatter } from 'react-chartjs-2';
 // Import parts to build and customise the chart
 import {
   Chart as ChartJS,
@@ -60,7 +60,7 @@ export default function ExampleGraphPage() {
   return (
     <div style={{ padding: '20px' }}>
       <h2>Total Heat vs Total Size</h2>
-      <Line data={chartData} />
+      <Scatter data={chartData} />
     </div>
   );
 }
