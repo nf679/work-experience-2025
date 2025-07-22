@@ -85,7 +85,9 @@ export default function GwsTable() {
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
               <th>Path</th>
-              <th><SortDropdown column="date" label="Last Scan Date" /></th>
+              <th><SortDropdown column="date" label="Last Scan" /></th>
+              <th><SortDropdown column="numChildren" label="Number" /></th>
+              <th><SortDropdown column="totalSize" label="Size" /></th>
             </tr>
           </thead>
           <tbody>
@@ -96,6 +98,8 @@ export default function GwsTable() {
                   <code>{entry.label}</code>
                 </td>
                 <td>{entry.date}</td>
+                <td>{entry.numChildren}</td>
+                <td>{entry.totalSize}</td>
               </tr>
             ))}
           </tbody>
