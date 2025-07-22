@@ -24,6 +24,8 @@ export default function GwsTable() {
     originalIndex: idx + 1,      // The original position in the data 
     label: entry.path,           // The path name
     date: entry.last_scan_date,  // When it was last scanned
+    numChildren: entry.total_count,
+    totalSize: entry.total_size
   }));
 
   // Sort data depending on sortBy and sortOrder
