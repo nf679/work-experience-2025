@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'; // Import the React librarie
 import axios from 'axios'; // Import axios for making HTTP requests (to get data from back-end)
 
 // Function defining the main component for displaying the table of GWS data
-export default function GwsTable() {
+export default function QuotaTablePage() {
   const [rawData, setRawData] = useState({}); // Holds raw data fetched straight from back-end
 
   // sortBy decides which column we're sorting by (index or date)
