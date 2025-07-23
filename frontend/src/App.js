@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 // Import the individual page components
 import ExampleGraphPage from './pages/ExampleGraphPage';
 import ExampleTablePage from './pages/ExampleTablePage';
-import OverviewPage from './pages/OverviewPage';
 import HeatVsSizeGraph from './pages/HeatVsSizeGraphPage';
 import QuotaTablePage from './pages/QuotaTablePage';
 import OverviewPage from './pages/OverviewPage';
