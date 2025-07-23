@@ -44,6 +44,18 @@ export default function OverviewPage() {
         ? new Date(a.date) - new Date(b.date)
         // Otherwise do this:
         : new Date(b.date) - new Date(a.date);
+    } else if (sortBy === 'numChildren') {
+      return sortOrder === 'ascending'
+        //ascent
+        ? a.numChildren - b.numChildren
+        //descent
+        : b.numChildren - a.numChildren
+    } else if (sortBy === 'totalSize') {
+      return sortOrder === 'ascending'
+        //ascent
+        ? a.totalSize - b.totalSize
+        //descent
+        : b.totalSize - a.totalSize
     }
     return 0; // Fallback option - shouldn't be reached!
   });

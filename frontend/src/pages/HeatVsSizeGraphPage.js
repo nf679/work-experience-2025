@@ -18,8 +18,11 @@ import {
   Legend // legend for the chart
 } from 'chart.js';
 
+import annotationPlugin from "chartjs-plugin-annotation"
+// Imports the plugin to draw lines on the graph
+
 // Register all the imported chart components so chart.js knows how to use them
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, annotationPlugin );
 
 let paths = ""; //Initializes the path variable
 
@@ -71,12 +74,35 @@ export default function ExampleGraphPage() {
             tooltip: {
                 enabled: true,
                 callbacks: {
+                    // Set the title of tooltips to the path of the data
                     title: function(tooltipItems){
                         const index = tooltipItems[0].dataIndex;
                         return String(paths[index])
                     }
                 }
                 
+            },
+            annotation: {
+              // Lists the different lines that are being drawn onto the graph
+              annotations: [{
+                // Settings for the horizontal line
+                type: "line",
+                mode: "horizontal",
+                scaleID: "y",
+                value: "3.62",
+                borderColor: "red",
+                borderWidth: 2
+              },
+              {
+                // Settings for the vertical line
+                type: "line",
+                mode: "vertical",
+                scaleID: "x",
+                value: "1845681",
+                borderColor: "blue",
+                borderWidth: 2
+              }
+            ]
             }
         },
         scales:{
