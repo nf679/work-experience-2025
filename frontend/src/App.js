@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 // Import the individual page components
 import ExampleGraphPage from './pages/ExampleGraphPage';
 import ExampleTablePage from './pages/ExampleTablePage';
+import OverviewPage from './pages/OverviewPage';
 import HeatVsSizeGraph from './pages/HeatVsSizeGraphPage';
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/fwtheme-react-jasmin/Footer';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/example-graph" element={<ExampleGraphPage />} />
           <Route path="/example-table" element={<ExampleTablePage />} />
+          <Route path="/overview-table" element={<OverviewPage />} />
           <Route path="/heat-vs-size-graph" element={<HeatVsSizeGraph />} />
         </Routes>
       </Router>
