@@ -84,7 +84,8 @@ export default function QuotaTablePage() {
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
               <th>Path</th>
-              <th><SortDropdown column="date" label="Last Scan Date" /></th>
+              <th><SortDropdown column="totalSize" label="Size" /></th>
+              <th><SortDropdown column="quotaValue" label="Quota" /></th>
             </tr>
           </thead>
           <tbody>
