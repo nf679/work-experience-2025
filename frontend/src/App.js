@@ -23,7 +23,7 @@ function App() {
           <Route path="/example-graph" element={<ExampleGraphPage />} />
           <Route path="/example-table" element={<ExampleTablePage />} />
           <Route path="/heat-vs-size-graph" element={<HeatVsSizeGraph />} />
-          <Route path="/overview-table" element={<OverviewPage />} />
+          <Route path="/overview-page" element={<OverviewPage />} />
         </Routes>
       </Router>
     {/* Show the footer at the bottom of every page */}
