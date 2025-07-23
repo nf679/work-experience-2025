@@ -6,7 +6,6 @@ import ExampleGraphPage from './pages/ExampleGraphPage';
 import ExampleTablePage from './pages/ExampleTablePage';
 import OverviewPage from './pages/OverviewPage';
 import HeatVsSizeGraph from './pages/HeatVsSizeGraphPage';
-import OverviewPage from './pages/OverviewPage';
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/fwtheme-react-jasmin/Footer';
 import HomePage from './pages/HomePage';
