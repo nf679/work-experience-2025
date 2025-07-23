@@ -40,7 +40,7 @@ def load_quota_data():
    with open(data_path_quota, "r") as f:
       # Read the JSON data and convert it into Python data (dictionary)
       quotaData = json.load(f)
-    originalData = load_data()
+      originalData = load_data()
     for key in quotaData.keys():#in quota
       dictionaryQuotaKey = key
       dictionaryQuotaValue = quotaData[dictionaryQuotaKey]
