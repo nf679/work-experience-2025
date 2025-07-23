@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 // Axios is a library used to make HTTP requests (get data from back-end)
 import axios from 'axios';
 // Import the line chart component from the react-chartjs-2 library
-import { Line, Scatter } from 'react-chartjs-2';
+import {  Scatter } from 'react-chartjs-2';
 // Import parts to build and customise the chart
 import {
   Chart as ChartJS,
@@ -21,6 +21,9 @@ import {
 // Register all the imported chart components so chart.js knows how to use them
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
+let paths = ""; //Initializes the path variable
+
+
 // A function for the main component shown on the graph page
 export default function ExampleGraphPage() {
   const [chartData, setChartData] = useState(null); // This will hold the data for the chart
@@ -34,6 +37,7 @@ export default function ExampleGraphPage() {
         // Extract the path and total_count values from each data item
         const labels = Object.values(data).map(entry => entry.total_size); // x-axis labels
         const counts = Object.values(data).map(entry => entry.total_heat); // y-axis data
+        paths = Object.values(data).map(entry => entry.path) // Contains the path data
 
         // Create chart data in the format required by chart.js
         setChartData({
@@ -50,7 +54,47 @@ export default function ExampleGraphPage() {
         });
       })
       .catch(console.error); // Log an error if something goes wrong
-  }, []);
+      
+  }, []);  
+  // Contains all the options to modify the chart
+  const chartOptions = {
+        plugins:{
+            title:{
+                // Settings for the chart title
+                display: true,
+                text: "Total Heat vs Total Size",
+                font: {
+                    size: 30,
+                    weight: "bolder"
+                }
+            },
+            tooltip: {
+                enabled: true,
+                callbacks: {
+                    title: function(tooltipItems){
+                        const index = tooltipItems[0].dataIndex;
+                        return String(paths[index])
+                    }
+                }
+                
+            }
+        },
+        scales:{
+                y:{
+                    //Settings for the y axis
+                    title:{
+                        display:true,
+                        text: "Total Heat"
+                    }
+                },
+                x: {
+                    //Settings for the x axis
+                    title: {
+                        display: true,
+                        text: "Total Size"
+                    }
+                }
+            }}
 
   // Show a loading message while the data is still being fetched
   // !chartData means chartData is null/empty
@@ -60,7 +104,7 @@ export default function ExampleGraphPage() {
   return (
     <div style={{ padding: '20px' }}>
       <h2>Total Heat vs Total Size</h2>
-      <Scatter data={chartData} />
+      <Scatter data={chartData} options = {chartOptions}/>
     </div>
   );
 }
