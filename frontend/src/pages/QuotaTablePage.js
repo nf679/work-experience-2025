@@ -6,7 +6,7 @@ export default function QuotaTablePage() {
   const [rawData, setRawData] = useState({}); // Holds raw data fetched straight from back-end
 
   // sortBy decides which column we're sorting by (index or date)
-  const [sortBy, setSortBy] = useState('date');
+  const [sortBy, setSortBy] = useState('index');
 
   // sortOrder controls whether the data is sorted from smallest to largest or largest to smallest
   const [sortOrder, setSortOrder] = useState('descending');
@@ -14,11 +14,11 @@ export default function QuotaTablePage() {
   // This useEffect runs once when the component first loads
   useEffect(() => {
     // Fetch data from the FastAPI backend
-    axios.get('http://localhost:8000/api/full-GWS-data')
+    axios.get('http://localhost:8000/api/full-GWS-quota')
       .then(res => setRawData(res.data)) // Save the result in state
       .catch(console.error); // Show error in the console if the request fails
   }, []);
-
+     console.log(rawData);
   // Turn the raw data into an array of entries we can display in a table
   const baseArr = Object.values(rawData).map((entry, idx) => ({
     originalIndex: idx + 1,      // The original position in the data 
@@ -95,7 +95,6 @@ export default function QuotaTablePage() {
                 <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px' }}>
                   <code>{entry.label}</code>
                 </td>
-                <td>{entry.date}</td>
                 <td>{entry.totalSize}</td>
                 <td>{entry.quotaValue}</td>
               </tr>

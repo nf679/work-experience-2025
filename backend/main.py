@@ -34,17 +34,19 @@ def load_data():
       return json.load(f)
 
 def load_quota_data():
-   # This shows the function where the data can be found.
-   data_path_quota = Path("./data/gws_quota.json")
-   # Load the data into Python so we can send it to users.
-   with open(data_path_quota, "r") as f:
+    # This shows the function where the data can be found.
+    data_path_quota = Path("./data/gws_quota.json")
+    # Load the data into Python so we can send it to users.
+    with open(data_path_quota, "r") as f:
       # Read the JSON data and convert it into Python data (dictionary)
       quotaData = json.load(f)
       originalData = load_data()
     for key in quotaData.keys():#in quota
       dictionaryQuotaKey = key
       dictionaryQuotaValue = quotaData[dictionaryQuotaKey]
+      print(dictionaryQuotaValue)
       for x in originalData.values():#in data
+        print(x)
         if x["path"] == dictionaryQuotaKey:
           x.update({"quota_value":dictionaryQuotaValue})
     return originalData
