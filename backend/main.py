@@ -33,6 +33,26 @@ def load_data():
       # Read the JSON data and convert it into Python data (dictionary)
       return json.load(f)
 
+def load_quota_data():
+   # This shows the function where the data can be found.
+   data_path_quota = Path("./data/gws_quota.json")
+   # Load the data into Python so we can send it to users.
+   with open(data_path, "r") as f:
+      # Read the JSON data and convert it into Python data (dictionary)
+      quotaData = json.load(f)
+    originalData = load_data()
+    for key in quotaData.keys():#in quota
+      dictionaryQuotaKey = key
+      dictionaryQuotaValue = quotaData[dictionaryQuotaKey]
+      for x in originalData.values():#in data
+        if x["path"] == dictionaryQuotaKey:
+          x.update({"quota_value":dictionaryQuotaValue})
+    return originalData
+
+      
+      #get the values from the dictionary and use the update function to add it to the data with correspondnig keys
+
+
 def total_heat():
     #Returns a modified version of the json file with the total heat for each bit of data
     data_path = Path("./data/gws_data.json")
@@ -63,3 +83,11 @@ def full_GWS_data():
 def heat_data():
   data = total_heat()
   return data
+
+#URL returns data loaded from the load_quota function
+@app.get("/api/full-GWS-quota")
+def full_GWS_quota():
+  data = load_quota_data()
+  return data
+  
+#x = @app.get(model)

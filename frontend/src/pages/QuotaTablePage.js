@@ -23,7 +23,8 @@ export default function QuotaTablePage() {
   const baseArr = Object.values(rawData).map((entry, idx) => ({
     originalIndex: idx + 1,      // The original position in the data 
     label: entry.path,           // The path name
-    date: entry.last_scan_date,  // When it was last scanned
+    totalSize: entry.total_size,
+    quotaValue: entry.quota_value
   }));
 
   // Sort data depending on sortBy and sortOrder
@@ -94,6 +95,8 @@ export default function QuotaTablePage() {
                   <code>{entry.label}</code>
                 </td>
                 <td>{entry.date}</td>
+                <td>{entry.totalSize}</td>
+                <td>{entry.quotaValue}</td>
               </tr>
             ))}
           </tbody>
