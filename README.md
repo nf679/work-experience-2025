@@ -2,7 +2,7 @@
 
 ## Contributors
 
-This app has been developed by Nicola, Shrey, ...
+This app has been developed by Nicola, Shrey & Melissa.
 
 ## Repository Structure and information
 

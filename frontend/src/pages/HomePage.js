@@ -11,7 +11,8 @@ export default function HomePage() {
       <nav>
         <ul>
           <li><Link to="/example-graph">Example Graph Page</Link></li>
-          <li><Link to="/example-table">Example Table Page</Link></li>          
+          <li><Link to="/example-table">Example Table Page</Link></li>
+          <li><Link to="/overview-table">Example Table Page</Link></li>
           <li><Link to="/heat-vs-size-graph">Heat vs Size Graph</Link></li>
           <li><Link to="/overview-page">Overview Table Page</Link></li>
         </ul>
