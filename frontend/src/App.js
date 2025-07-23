@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import ExampleGraphPage from './pages/ExampleGraphPage';
 import ExampleTablePage from './pages/ExampleTablePage';
 import HeatVsSizeGraph from './pages/HeatVsSizeGraphPage';
-import QuotaTablePage from './pages/QuotaTablePage'
+import QuotaTablePage from './pages/QuotaTablePage';
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/fwtheme-react-jasmin/Footer';
 import HomePage from './pages/HomePage';
