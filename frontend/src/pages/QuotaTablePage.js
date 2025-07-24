@@ -91,7 +91,7 @@ export default function QuotaTablePage() {
       <h3>GWS Paths and Scan Dates</h3>
 
       <div className="card" style={{ backgroundColor: '#f8f9fa', borderRadius: '0' }}>
-        <table className="table table-hover table-striped">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
