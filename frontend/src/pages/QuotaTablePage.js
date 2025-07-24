@@ -90,8 +90,8 @@ export default function QuotaTablePage() {
     <div style={{ padding: '20px' }}>
       <h3>GWS Paths and Scan Dates</h3>
 
-      <div className="card" style={{ backgroundColor: '#f8f9fa', borderRadius: '0' }}>
-        <table className="table table-striped">
+      <div className="card" style={{ backgroundColor: '#f8f4fa', borderRadius: '0' }}>
+        <table className=" table table-hover table-striped">
           <thead>
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
@@ -103,16 +103,16 @@ export default function QuotaTablePage() {
           <tbody>
             {sortedArr.map((entry) => (
               <tr key={entry.label}>
-                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'white'}}>
                   <code>{entry.originalIndex}</code>
                 </td>
-                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px',backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear' }}>
+                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px',backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'white' }}>
                   <code>{entry.label}</code>
                 </td>
-                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'white'}}>
                   <code>{entry.totalSize}</code>
                 </td>
-                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'white' }}>
                   <code>{entry.quotaValue}</code>
                 </td>
               </tr>
