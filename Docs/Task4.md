@@ -42,5 +42,15 @@ Then I added columns for the total size and the quota values.
 Task 4b was to highlight any rows where the total size was bigger than the quota size. 
 
 ```
-
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.originalIndex}</code>
+                </td>
+                <td style={{whiteSpace: 'nowrap',textOverflow: 'ellipsis', maxWidth: '300px' ,backgroundColor: entry.totalSize> entry.quotaValue ? "#b3c5f3ff":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.label}</code> 
+                </td>
+                <td style={{ backgroundColor: entry.totalSize>entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.totalSize}</code>
+                </td>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.quotaValue}</code>
 ```
