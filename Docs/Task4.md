@@ -36,7 +36,11 @@ Then in another loop nested within, the dictionary that was storing the data had
 
 Then I added columns for the total size and the quota values. 
 
-![](.\)
+![](.\images\QuotaTable.png)
 
 ### Task 4b
 Task 4b was to highlight any rows where the total size was bigger than the quota size. 
+
+```
+
+```
