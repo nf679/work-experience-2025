@@ -24,3 +24,17 @@ def test_full_GWS_data():
     data = response.json()
     # Check if the response is a dictionary or list which is the format we are expecting
     assert isinstance(data, dict) or isinstance(data, list)
+
+
+
+def test_heat_data():
+    # Send a fake GET request to the heat data URL and get the response.
+    response = client.get("/api/heat-data")
+    # Make sure the server responded with "200 OK" (which means success).
+    assert response.status_code == 200
+    # Get the JSON response (a format we can easily work with)
+    data = response.json()
+    # Check if the response is a dictionary or list which is the format we are expecting
+    assert isinstance(data, dict) or isinstance(data, list)
+
+test_heat_data()
