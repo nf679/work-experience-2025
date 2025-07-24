@@ -103,8 +103,10 @@ export default function QuotaTablePage() {
           <tbody>
             {sortedArr.map((entry) => (
               <tr key={entry.label}>
-                <td>{entry.originalIndex}</td>
-                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px' }}>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
+                  <code>{entry.originalIndex}</code>
+                </td>
+                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px',backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear' }}>
                   <code>{entry.label}</code>
                 </td>
                 <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
