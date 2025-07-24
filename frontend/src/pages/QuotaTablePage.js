@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'; // Import the React librarie
 import axios from 'axios'; // Import axios for making HTTP requests (to get data from back-end)
 
 // Function defining the main component for displaying the table of GWS data
-export default function OverviewPage() {
+export default function QuotaTablePage() {
   const [rawData, setRawData] = useState({}); // Holds raw data fetched straight from back-end
 
   // sortBy decides which column we're sorting by (index or date)
-  const [sortBy, setSortBy] = useState('date');
+  const [sortBy, setSortBy] = useState('index');
 
   // sortOrder controls whether the data is sorted from smallest to largest or largest to smallest
   const [sortOrder, setSortOrder] = useState('descending');
@@ -14,18 +14,17 @@ export default function OverviewPage() {
   // This useEffect runs once when the component first loads
   useEffect(() => {
     // Fetch data from the FastAPI backend
-    axios.get('http://localhost:8000/api/full-GWS-data')
+    axios.get('http://localhost:8000/api/full-GWS-quota')
       .then(res => setRawData(res.data)) // Save the result in state
       .catch(console.error); // Show error in the console if the request fails
   }, []);
-
+     console.log(rawData);
   // Turn the raw data into an array of entries we can display in a table
   const baseArr = Object.values(rawData).map((entry, idx) => ({
     originalIndex: idx + 1,      // The original position in the data 
     label: entry.path,           // The path name
-    date: entry.last_scan_date,  // When it was last scanned
-    numChildren: entry.total_count,
-    totalSize: entry.total_size
+    totalSize: entry.total_size,
+    quotaValue: entry.quota_value
   }));
 
   // Sort data depending on sortBy and sortOrder
@@ -44,18 +43,18 @@ export default function OverviewPage() {
         ? new Date(a.date) - new Date(b.date)
         // Otherwise do this:
         : new Date(b.date) - new Date(a.date);
-    } else if (sortBy === 'numChildren') {
-      return sortOrder === 'ascending'
-        //ascent
-        ? a.numChildren - b.numChildren
-        //descent
-        : b.numChildren - a.numChildren
     } else if (sortBy === 'totalSize') {
       return sortOrder === 'ascending'
         //ascent
         ? a.totalSize - b.totalSize
         //descent
         : b.totalSize - a.totalSize
+    } else if (sortBy === 'quotaValue') {
+      return sortOrder === 'ascending'
+      //ascent
+      ? a.quotaValue - b.quotaValue
+      //descent
+      : b.quotaValue - a.quotaValue
     }
     return 0; // Fallback option - shouldn't be reached!
   });
@@ -97,9 +96,8 @@ export default function OverviewPage() {
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
               <th>Path</th>
-              <th><SortDropdown column="date" label="Last Scan" /></th>
-              <th><SortDropdown column="numChildren" label="Number" /></th>
               <th><SortDropdown column="totalSize" label="Size" /></th>
+              <th><SortDropdown column="quotaValue" label="Quota" /></th>
             </tr>
           </thead>
           <tbody>
@@ -109,9 +107,8 @@ export default function OverviewPage() {
                 <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px' }}>
                   <code>{entry.label}</code>
                 </td>
-                <td>{entry.date}</td>
-                <td>{entry.numChildren}</td>
                 <td>{entry.totalSize}</td>
+                <td>{entry.quotaValue}</td>
               </tr>
             ))}
           </tbody>
