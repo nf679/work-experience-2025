@@ -54,3 +54,5 @@ Task 4b was to highlight any rows where the total size was bigger than the quota
                 <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
                   <code>{entry.quotaValue}</code>
 ```
+
+![](./images/QuotaTable2.png)
