@@ -43,6 +43,18 @@ export default function QuotaTablePage() {
         ? new Date(a.date) - new Date(b.date)
         // Otherwise do this:
         : new Date(b.date) - new Date(a.date);
+    } else if (sortBy === 'totalSize') {
+      return sortOrder === 'ascending'
+        //ascent
+        ? a.totalSize - b.totalSize
+        //descent
+        : b.totalSize - a.totalSize
+    } else if (sortBy === 'quotaValue') {
+      return sortOrder === 'ascending'
+      //ascent
+      ? a.quotaValue - b.quotaValue
+      //descent
+      : b.quotaValue - a.quotaValue
     }
     return 0; // Fallback option - shouldn't be reached!
   });
