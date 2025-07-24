@@ -106,10 +106,10 @@ export default function QuotaTablePage() {
                 <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
                   <code>{entry.originalIndex}</code>
                 </td>
-                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px',backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent' ,borderColor:"transparent",borderWidth:"20px"}}>
-                  <code>{entry.label}</code>
+                <td style={{whiteSpace: 'nowrap',textOverflow: 'ellipsis', maxWidth: '300px' ,backgroundColor: entry.totalSize> entry.quotaValue ? "#b3c5f3ff":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.label}</code> 
                 </td>
-                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
+                <td style={{ backgroundColor: entry.totalSize>entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
                   <code>{entry.totalSize}</code>
                 </td>
                 <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
@@ -124,3 +124,4 @@ export default function QuotaTablePage() {
   );
 }
 
+//, overflow: 'hidden'
