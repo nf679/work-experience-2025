@@ -90,8 +90,8 @@ export default function QuotaTablePage() {
     <div style={{ padding: '20px' }}>
       <h3>GWS Paths and Scan Dates</h3>
 
-      <div className="card" style={{ backgroundColor: '#f8f9fa', borderRadius: '0' }}>
-        <table className="table table-hover table-striped">
+      <div className="card" style={{ backgroundColor: '#f8f4fa', borderRadius: '5', borderWidth: "10px", borderColor: "transparent" }}>
+        <table className=" table-hover table-striped">
           <thead>
             <tr>
               <th><SortDropdown column="index" label="#" /></th>
@@ -103,12 +103,18 @@ export default function QuotaTablePage() {
           <tbody>
             {sortedArr.map((entry) => (
               <tr key={entry.label}>
-                <td>{entry.originalIndex}</td>
-                <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px' }}>
-                  <code>{entry.label}</code>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.originalIndex}</code>
                 </td>
-                <td>{entry.totalSize}</td>
-                <td>{entry.quotaValue}</td>
+                <td style={{whiteSpace: 'nowrap',textOverflow: 'ellipsis', maxWidth: '300px' ,backgroundColor: entry.totalSize> entry.quotaValue ? "#b3c5f3ff":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.label}</code> 
+                </td>
+                <td style={{ backgroundColor: entry.totalSize>entry.quotaValue ? "#B3C5F3":'transparent',borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.totalSize}</code>
+                </td>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "#B3C5F3":'transparent' ,borderColor:"transparent",borderWidth:"10px"}}>
+                  <code>{entry.quotaValue}</code>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -118,3 +124,4 @@ export default function QuotaTablePage() {
   );
 }
 
+//, overflow: 'hidden'
