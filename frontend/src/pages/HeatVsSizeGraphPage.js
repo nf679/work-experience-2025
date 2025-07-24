@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 // Axios is a library used to make HTTP requests (get data from back-end)
 import axios from 'axios';
 // Import the line chart component from the react-chartjs-2 library
-import {  Scatter } from 'react-chartjs-2';
+import {  Chart, Scatter } from 'react-chartjs-2';
 // Import parts to build and customise the chart
 import {
   Chart as ChartJS,
@@ -30,7 +30,9 @@ let paths = ""; //Initializes the path variable
 // A function for the main component shown on the graph page
 export default function ExampleGraphPage() {
   const [chartData, setChartData] = useState(null); // This will hold the data for the chart
-
+  const [xValue,setxValue] = useState(0) // Sets values for the X limit on the graph
+  const [yValue,setyValue] = useState(0) // Sets values for the Y limit on the graph
+  
   // useEffect runs once when the page loads
   useEffect(() => {
     // Make a GET request to the FastAPI backend to get JSON data
@@ -41,6 +43,8 @@ export default function ExampleGraphPage() {
         const labels = Object.values(data).map(entry => entry.total_size); // x-axis labels
         const counts = Object.values(data).map(entry => entry.total_heat); // y-axis data
         paths = Object.values(data).map(entry => entry.path) // Contains the path data
+      
+        
 
         // Create chart data in the format required by chart.js
         setChartData({
@@ -59,8 +63,13 @@ export default function ExampleGraphPage() {
       .catch(console.error); // Log an error if something goes wrong
       
   }, []);  
+
+  function updateLimits(){
+    setxValue(document.getElementById("xValue").value); // Updates the x limit
+    setyValue(document.getElementById("yValue").value); // Updates the y limit
+  }
   // Contains all the options to modify the chart
-  const chartOptions = {
+    let chartOptions = {
         plugins:{
             title:{
                 // Settings for the chart title
@@ -89,7 +98,7 @@ export default function ExampleGraphPage() {
                 type: "line",
                 mode: "horizontal",
                 scaleID: "y",
-                value: "3.62",
+                value: yValue,
                 borderColor: "red",
                 borderWidth: 2
               },
@@ -98,7 +107,7 @@ export default function ExampleGraphPage() {
                 type: "line",
                 mode: "vertical",
                 scaleID: "x",
-                value: "1845681",
+                value: xValue,
                 borderColor: "blue",
                 borderWidth: 2
               }
@@ -131,6 +140,16 @@ export default function ExampleGraphPage() {
     <div style={{ padding: '20px' }}>
       <h2>Total Heat vs Total Size</h2>
       <Scatter data={chartData} options = {chartOptions}/>
+      <div>
+        X:
+        <input type="number" id="xValue" placeholder="X Boundary" style={{margin: "10px"}} />
+      </div>
+      <div>
+        Y:
+        <input type="number" id="yValue" placeholder="Y Boundary" style={{margin: "10px"}} />
+        <button onClick={updateLimits} style={{backgroundColor: "#67bf4e", color: "white", borderColor: "#ffffff", borderRadius: "8px"}}>Update</button>
+      </div>
     </div>
+    
   );
 }
