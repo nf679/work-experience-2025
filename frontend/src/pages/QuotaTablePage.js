@@ -107,10 +107,12 @@ export default function QuotaTablePage() {
                 <td style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '300px' }}>
                   <code>{entry.label}</code>
                 </td>
-                <td style={{ background: HTMLTableRowElement.entry.totalSize> HTMLTableRowElement.entry.quotaValue ? "blue" :"red"}}>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
                   <code>{entry.totalSize}</code>
                 </td>
-                <td>{entry.quotaValue}</td>
+                <td style={{ backgroundColor: entry.totalSize> entry.quotaValue ? "blue":'clear'}}>
+                  <code>{entry.quotaValue}</code>
+                </td>
               </tr>
             ))}
           </tbody>
