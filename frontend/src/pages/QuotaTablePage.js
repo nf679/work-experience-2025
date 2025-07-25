@@ -18,7 +18,6 @@ export default function QuotaTablePage() {
       .then(res => setRawData(res.data)) // Save the result in state
       .catch(console.error); // Show error in the console if the request fails
   }, []);
-     console.log(rawData);
   // Turn the raw data into an array of entries we can display in a table
   const baseArr = Object.values(rawData).map((entry, idx) => ({
     originalIndex: idx + 1,      // The original position in the data 

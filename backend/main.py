@@ -44,9 +44,7 @@ def load_quota_data():
     for key in quotaData.keys():#in quota
       dictionaryQuotaKey = key
       dictionaryQuotaValue = quotaData[dictionaryQuotaKey]
-      print(dictionaryQuotaValue)
       for x in originalData.values():#in data
-        print(x)
         if x["path"] == dictionaryQuotaKey:
           x.update({"quota_value":dictionaryQuotaValue})
     return originalData
