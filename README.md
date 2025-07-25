@@ -90,3 +90,18 @@ On mac AND windows (make sure to have activated your virtual environment):
 cd backend
 pytest
 ```
+
+### Running the app in a Docker container
+
+Make sure you have installed Docker desktop and have it running.
+
+In a terminal, type the following in the root of the directory (i.e. not in the backend or frontend folders)
+```
+docker-compose up --build
+```
+This will build and run the backend at `http://localhost:8000` and the frontend at `http://localhost:3000`.
+
+To stop the app, type:
+```
+docker-compose down
+```
