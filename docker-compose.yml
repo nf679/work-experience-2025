@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend  # Build the backend Dockerfile from the /backend directory
+    command: uvicorn main:app --host 0.0.0.0 --port 8000  # Run the FastAPI server
+    ports:
+      - "8000:8000"  # Expose the backend API on port 8000
+    volumes:
+      - ./backend:/app  # Sync local code for live reload
+    depends_on:
+      - frontend  # Start the frontend first (optional)
+
+  frontend:
+    build:
+      context: ./frontend  # Build the frontend Dockerfile from the /frontend directory
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Expose the frontend on port 3000
+    working_dir: /app  # Set the working directory in the container
+    command: yarn start  # Run the React server
+    volumes:
+      - ./frontend:/app  # Sync frontend code for live development
+    stdin_open: true  # Keep stdin open so React dev tools work
+    tty: true  # Allocate a terminal (necessary for interactive tools)
